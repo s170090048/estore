@@ -33,6 +33,18 @@ public class RegistServlet extends HttpServlet {
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		//进行验证码判断
+		String checkCode=request.getParameter("checkcode");
+		String _checkCode=(String) request.getSession().getAttribute("checkcode_session");
+		request.getSession().removeAttribute("checkcode_session");//从session中删除
+		if(!checkCode.equals(_checkCode))
+		{
+			request.setAttribute("regist.message", "验证码不正确");
+			request.getRequestDispatcher("/regist.jsp").forward(request, response);
+			return;
+			
+		}		
+		
 		//1.得到所有请求参数，封装到User对象。
 		User user=new User();
 		try {
