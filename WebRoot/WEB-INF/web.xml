@@ -35,7 +35,7 @@
   <servlet-mapping>
     <servlet-name>RegistServlet</servlet-name>
     <url-pattern>/regist</url-pattern>
-  </servlet-mapping>	
+  </servlet-mapping>		
   
 
  
@@ -45,4 +45,9 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+<!--   <error-page>
+    <error-code></error-code>
+    <exception-type></exception-type>
+    <location></location>  
+  </error-page> -->
 </web-app>

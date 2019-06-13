@@ -3,10 +3,26 @@ package com.jason.estore.exception;
 @SuppressWarnings("serial")
 public class RegistException extends Exception{
 
-	@Override
-	public void printStackTrace() {
-		// TODO Auto-generated method stub
-		super.printStackTrace();
+	public RegistException() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
+
+	public RegistException(String message, Throwable cause) {
+		super(message, cause);
+		// TODO Auto-generated constructor stub
+	}
+
+	public RegistException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+	public RegistException(Throwable cause) {
+		super(cause);
+		// TODO Auto-generated constructor stub
+	}
+
+
 
 }

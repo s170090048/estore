@@ -7,7 +7,7 @@ import com.jason.estore.domain.User;
 import com.jason.estore.exception.RegistException;
 
 public class UserService {
-	public void regist(User user) throws Exception  {
+	public void regist(User user) throws RegistException    {
 		UserDao dao=new UserDao();
 		try {
 			dao.addUser(user);
@@ -16,7 +16,7 @@ public class UserService {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			//抛一个自定义异常
-			throw new RegistException();
+			throw new RegistException("注册失败");
 		}
 	
 		
